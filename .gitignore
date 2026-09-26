@@ -1,0 +1,22 @@
+# Configuración local de PHP (incluye campos de conexión).
+/stdio/Config/Config.php
+.env
+.env.*
+!.env.example
+
+# Registros y archivos temporales.
+error_log
+*.log
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Exportaciones y archivo voluminoso: permanecen en disco.
+# Su distribución se definirá antes de publicar el proyecto.
+/stdio/Pc/Build/
+/stdio/Movil/Build/
+/stdio/Views/3DGLTF.rar
