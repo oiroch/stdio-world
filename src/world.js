@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { zones, TILE, COLS, ROWS, SPAWN, blocked, findPath } from './model.js';
+import { zones, interactables, TILE, COLS, ROWS, SPAWN, blocked, findPath } from './model.js';
 
 function terrain(){
  const c=document.createElement('canvas');c.width=COLS*TILE;c.height=ROWS*TILE;
@@ -47,6 +47,7 @@ function terrain(){
  books(74,342);cabinet(492,335,63,64);
  filmCamera(145,585);table(94,730,104,63);r(115,744,53,25,'#af79b9');
  monitor(428,1070,77,67);books(91,1477);filmCamera(470,1840);
+ table(384,285,96,35);monitor(398,256,67,46);t('>_',416,283,18,'#86e6ea');
  // Alfombra de llegada.
  r(268,216,105,99,'#654a85');r(272,220,97,91,'#ac72b5');r(278,226,85,79,'#76528f');r(286,234,69,63,'#815e9b');t('✦',314,270,24,'#e8b0e6');
  return c;
@@ -60,8 +61,8 @@ export function startWorld(callbacks){
  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
  const directions={up:[0,-1],down:[0,1],left:[-1,0],right:[1,0]};
  const keyMap={ArrowUp:'up',w:'up',ArrowDown:'down',s:'down',ArrowLeft:'left',a:'left',ArrowRight:'right',d:'right'};
- function info(){near=zones.find(z=>Math.abs(tile[0]-z.door[0])+Math.abs(tile[1]-z.door[1])<=1);callbacks.onPosition(tile);callbacks.onNear(near);}
- function go(id){const z=zones.find(z=>z.id===id);if(!z)return;pending={to:z.door,id};}
+ function info(){near=interactables.find(z=>Math.abs(tile[0]-z.door[0])+Math.abs(tile[1]-z.door[1])<=1);callbacks.onPosition(tile);callbacks.onNear(near);}
+ function go(id){const z=interactables.find(z=>z.id===id);if(!z)return;pending={to:z.door,id};}
  function destination(to,id=null){pending={to,id};}
  function enter(){if(near&&!callbacks.isModal())callbacks.onOpen(near.id);}
  function advance(delta){const to=[tile[0],Math.max(2,Math.min(73,tile[1]+delta))];if(blocked(...to)){to[0]=9;}destination(to);}
@@ -78,7 +79,7 @@ export function startWorld(callbacks){
  if(!down||callbacks.isModal())return;const dy=p.y-down.y,dx=p.x-down.x;down=null;
  if(Math.abs(dy)>30&&Math.abs(dy)>Math.abs(dx)){advance(dy<0?6:-6);return;}
  const point=cam.getWorldPoint(p.x,p.y),x=Math.floor(point.x/32),y=Math.floor(point.y/32);
- const z=zones.find(z=>x>=z.x&&x<z.x+z.w&&y>=z.y&&y<z.y+z.h);if(z)go(z.id);else if(!blocked(x,y))destination([x,y]);
+ const z=interactables.find(z=>x>=z.x&&x<z.x+z.w&&y>=z.y&&y<z.y+z.h);if(z)go(z.id);else if(!blocked(x,y))destination([x,y]);
  });
  this.input.on('wheel',(_p,_o,_dx,dy)=>{if(!callbacks.isModal()&&Math.abs(dy)>2)advance(dy>0?6:-6);});
  const keydown=e=>{if(callbacks.isModal()||['INPUT','TEXTAREA','BUTTON','A'].includes(document.activeElement?.tagName))return;const dir=keyMap[e.key];if(dir){e.preventDefault();held=dir;pending={step:dir};}if(e.key.toLowerCase()==='e')enter();};

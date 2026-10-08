@@ -96,3 +96,13 @@ El repositorio remoto todavía no está configurado en esta copia.
 La entrada abre directamente un estudio pixel art a pantalla completa. El mapa mide 640 × 2432 píxeles y la cámara sigue al personaje. Toca el suelo para caminar o un objeto principal para acercarte y abrir su contenido. Desliza hacia arriba para avanzar seis pasos; hacia abajo para regresar. En escritorio funcionan la rueda, las flechas y WASD. El botón inferior también permite avanzar y el inventario abre todo el contenido sin recorrer el mapa.
 
 Las cinco habitaciones son estudio, proyección, laboratorio, archivo y siguiente aventura. Los objetos principales y los muros bloquean el paso. La decoración junto a las paredes es visual. Los gráficos se dibujan localmente en canvas, sin imágenes externas ni recursos de Pokémon. No hay pantalla de inicio que requiera pulsar Jugar. La primera carga aún necesita descargar Phaser; no se garantiza carga instantánea en redes lentas.
+
+## Panel como easter egg (sin backend)
+
+En la computadora del estudio, escribe `admin` y después `MASTERKEY`. Es una clave del juego, visible en el código, no una protección de seguridad. Cerrar la ventana o pulsar Bloquear editor vuelve a pedirla. No uses aquí una contraseña personal.
+
+El editor carga `public/catalogo.json` y guarda los proyectos nuevos o editados en localStorage, en el navegador y origen actuales. No llama a una API ni requiere configurar contraseñas o ejecutar Flask. Cambiar de navegador, dispositivo o puerto no transfiere esa copia local. Exporta el catálogo para conservarla; borrar datos del navegador puede eliminarla.
+
+Para publicar los cambios, exporta el catálogo, sustituye `public/catalogo.json`, recompila y despliega en GitHub Pages. Guardar en el editor no modifica automáticamente el repositorio ni la web para otros visitantes.
+
+El servidor `admin_server.py` y el configurador anterior se conservan como archivos históricos, pero no son usados por este flujo. La configuración privada sigue excluida de Git. Para abrir el mundo usa `ABRIR-MUNDO.bat` o `npm run dev` (puerto 5173).

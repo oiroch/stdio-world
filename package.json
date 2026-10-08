@@ -10,6 +10,7 @@
     "test": "node --test tests/model.test.js"
   },
   "dependencies": {
+    "pdf-lib": "^1.17.1",
     "phaser": "^3.90.0"
   },
   "devDependencies": {

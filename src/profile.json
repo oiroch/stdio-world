@@ -1,0 +1,140 @@
+{
+  "name": "Mauricio Araiza Rodríguez",
+  "headline": "Productor y realizador audiovisual",
+  "tagline": "Producción, narrativa y tecnología para hacer que las ideas sucedan.",
+  "email": "mau@stdio.mx",
+  "website": "https://stdio.mx",
+  "about": "Soy productor y realizador audiovisual. Conecto la intención creativa de un proyecto con el trabajo necesario para llevarlo a pantalla: entender la historia, organizar los recursos, coordinar la producción y cuidar la entrega. Mi experiencia abarca cine, televisión, publicidad, videoclips y contenidos para plataformas digitales.",
+  "approach": "Me gusta involucrarme, resolver y encontrar alternativas. El set, las jornadas largas y los cambios de plan forman parte de mi trabajo; la organización y la comunicación me ayudan a sostener el rumbo creativo. También desarrollo pequeños recursos digitales para explorar ideas y facilitar procesos.",
+  "skills": [
+    {
+      "title": "Producción y coordinación",
+      "text": "Carpetas de producción, planes de trabajo, presupuestos, cotizaciones, proveedores y coordinación de equipos humanos y técnicos."
+    },
+    {
+      "title": "Guion y narrativa",
+      "text": "Escritura de guion, escaletas, breakdown, storyboard y estructuras narrativas adaptadas a las necesidades del proyecto."
+    },
+    {
+      "title": "Realización y trabajo en set",
+      "text": "Levantamiento de imagen, manejo de equipo de filmación y asistencia a producción y dirección en set y locación."
+    },
+    {
+      "title": "Diseño de producción",
+      "text": "Desarrollo de propuestas visuales, dirección artística en preproducción y coordinación de utilería, escenografía y arte."
+    },
+    {
+      "title": "Edición y postproducción",
+      "text": "Edición de material HD y 4K, composición, motion graphics y adaptación de contenidos a medios y plataformas."
+    },
+    {
+      "title": "Desarrollo y experimentación digital",
+      "text": "Interfaces web, scripts, consultas a APIs y exploración de herramientas interactivas. Integro la curiosidad tecnológica a mi práctica creativa."
+    }
+  ],
+  "workflow": [
+    {
+      "title": "Entender",
+      "text": "Escuchar el objetivo, la audiencia y las condiciones del proyecto para definir qué queremos contar."
+    },
+    {
+      "title": "Aterrizar",
+      "text": "Traducir la idea en guion, desglose, propuesta visual, presupuesto y plan de trabajo."
+    },
+    {
+      "title": "Resolver en producción",
+      "text": "Coordinar personas, proveedores y recursos; ajustar el plan cuando cambia la realidad del rodaje."
+    },
+    {
+      "title": "Cuidar la entrega",
+      "text": "Dar forma al material, revisar los detalles y adaptar el resultado a su medio de publicación."
+    }
+  ],
+  "experience": [
+    {
+      "date": "Desde 2014",
+      "title": "Productor, editor y realizador independiente",
+      "text": "Desarrollo de contenido audiovisual para agencias, organizaciones y proyectos independientes. Trabajo de preproducción, realización, edición y comunicación interna.",
+      "details": "Colaboraciones citadas en mi trayectoria: UTEL, CANACINE, Federación Canófila de México y Talleres Gráficos de México. También proyectos con BY POWER y Trancegrezor Label."
+    },
+    {
+      "date": "2011 - 2014",
+      "title": "Productor ejecutivo · VIDEOART.MX / Cinema 84",
+      "text": "Coordinación del plan de trabajo, breakdown y diseño de producción. Contacto con proveedores, cotizaciones, presupuestos, tiempos y recursos.",
+      "details": "Desarrollo de ideas para marcas, materiales de apoyo visual, producción y edición."
+    },
+    {
+      "date": "2011",
+      "title": "Asistente de producción · XY, Canal Once",
+      "text": "Trabajo en set y locación. Desglose de guiones y asistencia a producción y dirección durante la filmación.",
+      "details": "Coordinación de utilería, escenografía y arte; apoyo al equipo técnico y tramoya."
+    }
+  ],
+  "education": [
+    [
+      "2021",
+      "Maestría en Escritura de Guion Cinematográfico",
+      "Universidad de la Comunicación"
+    ],
+    [
+      "2018",
+      "Diplomado para Productores de Cine",
+      "CANACINE"
+    ],
+    [
+      "2017",
+      "Diseño de producción: Creando Espacios Audiovisuales",
+      "Universidad de la Comunicación"
+    ],
+    [
+      "2014 - 2016",
+      "Postproducción y Motion Graphics",
+      "ESCENA, Escuela de Animación y Arte Digital"
+    ],
+    [
+      "2014",
+      "Licenciatura en Ciencias de la Comunicación",
+      "Universidad del Colegio Holandés"
+    ],
+    [
+      "2014",
+      "Diplomado internacional de Lenguaje Audiovisual y Cine",
+      "Formación impartida por Guillermo Martínez Bárcena, Universidad de Cantabria"
+    ],
+    [
+      "2012",
+      "El Oficio Creativo de Producir Cine",
+      "Sección de Directores del S.T.P.C. de la R.M."
+    ]
+  ],
+  "software": [
+    "Adobe Creative Suite",
+    "After Effects",
+    "Cinema 4D",
+    "Blender",
+    "Maya",
+    "Unity",
+    "Word y Excel",
+    "HTML, CSS y JavaScript",
+    "PHP y MySQL",
+    "Windows, macOS y Linux"
+  ],
+  "projects": [
+    {
+      "title": "Mystica Girls",
+      "role": "Producción ejecutiva y coordinación",
+      "url": "https://www.youtube.com/watch?v=Bu0H6qt3RpE"
+    },
+    {
+      "title": "Lactacyd",
+      "role": "Coordinación de producción · Stop motion",
+      "url": "https://www.youtube.com/watch?v=5NX3Hu4HhOY"
+    },
+    {
+      "title": "Trident",
+      "role": "Asistencia de producción",
+      "url": "https://www.youtube.com/watch?v=QzEZIgiQezg"
+    }
+  ],
+  "interests": "Cine, videojuegos, nuevas tecnologías, desarrollo web, aplicaciones de inteligencia artificial y micología. El mundo interactivo de stdio.mx es otra manera de conectar esos intereses con mi trabajo."
+}

@@ -1,3 +1,4 @@
+import { validateTool } from './admin-model.js';
 export const COLS = 20, ROWS = 76, TILE = 32;
 export const SPAWN = [9, 8];
 export const zones = [
@@ -7,10 +8,12 @@ export const zones = [
  {id:'library',name:'Archivo de historias',tag:'LECTURAS',icon:'▤',x:11,y:48,w:6,h:4,door:[13,52],color:'#b995e5',description:'Un lugar para leer, imaginar y construir relatos.'},
  {id:'contact',name:'La siguiente aventura',tag:'CONTACTO',icon:'↗',x:7,y:65,w:6,h:4,door:[9,69],color:'#65bade',description:'¿Qué vamos a hacer que suceda?'}
 ];
+export const computer={id:'admin',name:'Computadora',tag:'TERMINAL',x:12,y:8,w:3,h:2,door:[13,10]};
+export const interactables=[...zones,computer];
 export function blocked(x,y){
  if(x<2||x>=18||y<2||y>=74)return true;
  if([13,28,44,60].includes(y)&&(x<8||x>11))return true;
- return zones.some(z=>x>=z.x&&x<z.x+z.w&&y>=z.y&&y<z.y+z.h);
+ return interactables.some(z=>x>=z.x&&x<z.x+z.w&&y>=z.y&&y<z.y+z.h);
 }
 
 export function findPath(from, to) {
@@ -50,6 +53,7 @@ export function validateCatalog(items) {
     if(item.url&&!validURL(item.url))throw new Error('Enlace no válido en '+item.id);
     if(item.tool&&!['beats','profile'].includes(item.tool))throw new Error('Herramienta desconocida.');
     if(!item.tool&&!item.url)throw new Error('Falta una acción en '+item.id);
+    if(item.type==='Herramienta'&&!item.tool)validateTool(item);
     ids.add(item.id);
   }
   return items;

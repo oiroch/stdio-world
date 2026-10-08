@@ -21,3 +21,8 @@ Thumbs.db
 /stdio/Pc/Build/
 /stdio/Movil/Build/
 /stdio/Views/3DGLTF.rar
+
+/.private/
+/public/*.tmp
+
+/tmp/pdfs/
